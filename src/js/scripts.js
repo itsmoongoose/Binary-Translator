@@ -73,5 +73,5 @@ async function main() {
 
 
     }
-    while (binaryCode) {}
+    while (menuChoice) {}
 }
