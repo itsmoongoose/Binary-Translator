@@ -42,7 +42,7 @@ async function main() {
                 //Checking For "2"
                 let check = paddedNum.includes("2");
                 if (check == true) {
-                    generatedNum = generatedNum - 1;
+                    let generatedNumber = generatedNum - 1;
 
                     //Finding Last 0
                     lastOccur = str.lastIndexOf("0");
