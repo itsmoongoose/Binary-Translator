@@ -36,7 +36,7 @@ async function main() {
             let binaryCode = await input("Please enter your binary code: ");
             binaryCode = binaryCode.trim();
             let binaryCodeArray = binaryCode.split(" ");
-            for (character of binaryCodeArray) {
+            for (let character of binaryCodeArray) {
             
             }
         }
