@@ -37,7 +37,7 @@ async function main() {
             //Listing Numbers
             for (let number = 0; number < 94; number = number + 1) {
                 generatedNum = startNum + 1
-                padding();
+                paddedNum = String(generatedNum).padStart(8, '0');
  
                 //Checking For "2"
                 let check = paddedNum.includes("2");
@@ -53,7 +53,7 @@ async function main() {
                     }
                     output(generatedNumFixed)
                 } else {
-                    output(generatedNum);
+                    output(paddedNum);
                 }
             }
         }
