@@ -9,12 +9,12 @@ const chart = {
 
 //Defining Variables
 let paddedNum = "";
-let startNum = 0;
+let generatedNum = 0;
 let menuChoice = "";
 
 //Function -- Padded Number
 function padding() {
-    paddedNum = String(startNum).padStart(8, '0');
+    paddedNum = String(generatedNum).padStart(8, '0');
 }
 
 //Function -- Main
@@ -22,22 +22,23 @@ async function main() {
     do {
 
         //Menu
-        output("Choose one of the following: \na) Create Binary Numbers \nb) Translate Binary Code");
+        output("Choose one of the following: \n1. Create Binary Numbers \n2. Translate Binary Code");
         menuChoice = await input("");
 
         //Input Not Recognized
-        while (menuChoice != "a" && menuChoice != "b") {
+        while (menuChoice != "1" && menuChoice != "2") {
             menuChoice = await input("Sorry, I don't recognize what you're typing. Please try again: ");
         }
 
         //Creating Binary Number List
-        if (menuChoice == "a") {
+        if (menuChoice == "1") {
+            let startNum = 0;
 
             //Listing Numbers
             for (let number = 0; number < 94; number = number + 1) {
-                let generatedNum = startNum + 1
+                generatedNum = startNum + 1
                 padding();
-
+ 
                 //Checking For "2"
                 let check = paddedNum.includes("2");
                 if (check == true) {
@@ -58,7 +59,7 @@ async function main() {
         }
         
         //Translating Binary Code
-        else if (menuChoice == "b") {
+        else if (menuChoice == "2") {
             let binaryCode = await input("Please enter your binary code: ");
             binaryCode = binaryCode.trim();
             let binaryCodeArray = binaryCode.split(" ");
