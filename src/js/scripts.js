@@ -28,7 +28,32 @@ async function main() {
 
         //Creating Binary Number List
         if (menuChoice == "a") {
-            
+            let startNum = "00000000";
+            startNum = Number(startNum);
+
+            //Listing Numbers
+            for (let number = 0; number < 94; number = number + 1) {
+                let generatedNum = Number(generatedNum)
+                generatedNum = startNum + 1;
+
+                //Checking For "2"
+                let check = generatedNum.includes("2");
+                if (check == true) {
+                    generatedNum = startNum - 1;
+                    let generatedNumStr = String(generatedNum);
+
+                    //Finding Last 0
+                    lastOccur = str.lastIndexOf("0");
+
+                    //Replacing lastOccur With 1
+                    if (lastOccur == true) {
+                        let generatedNumFixed = str.slice(0, lastOccur) + "1" + str.slice(lastOccur + 1);
+                    }
+                    output(generatedNumFixed)
+                } else {
+                    output(generatedNum);
+                }
+            }
         }
         
         //Translating Binary Code
